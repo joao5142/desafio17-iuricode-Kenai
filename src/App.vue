@@ -1,30 +1,60 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap");
+/*##RESET*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
-nav {
-  padding: 30px;
+ul,
+ol {
+  list-style: none;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+a {
+  text-decoration: none;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  border: 0;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  border: 0;
+  outline: none;
+}
+li {
+  cursor: pointer;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+  background-color: $dark-color;
+  color: $white-color;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  max-width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: $white-color;
+}
+body::-webkit-scrollbar-thumb {
+  background: $gray-dark-color;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 </style>
